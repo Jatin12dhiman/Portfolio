@@ -2,8 +2,8 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <footer className='bg-gray-900 text-white text-xl md:text-xl mt-12'>
-            <div className='container  grid grid-cols-1 grid-wrap  md:grid-cols-3 lg:grid-col-4 gap-4 y-8'>
+        <footer className='bg-gray-900 text-white  font-semibold md:text-xl py-24'>
+            <div className='container  grid grid-cols-1 grid-wrap  md:grid-cols-3 lg:grid-col-4 gap-4 y-8 text-xl'>
                 {/* Quick Links */}
                 <div className=' flex justify-center items-center  md:flex flex-col space-y-2 p-8'>
                     <span>  <a href="#" className='text-white hover:text-gray-400'>Home</a></span>

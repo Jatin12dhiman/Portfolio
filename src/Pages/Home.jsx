@@ -4,7 +4,7 @@ import image from "../assets/Jatin Dhiman Png (1) 2.png"
 const Home = () => {
     return (
         
-            <div className=' bg-gray-900 flex flex-col justify-center items-center md:flex-row md:justify-evenly w-full pb-8 px-[12px]'>
+            <section id="home" className=' bg-gray-900 flex flex-col justify-center items-center md:flex-row md:justify-evenly w-full pb-8 px-[12px]'>
                 {/* My image */}
                 <div className=''>
                     <img src={image} className='bg-gray-900 w-[100%] object-cover' />
@@ -28,7 +28,7 @@ const Home = () => {
                 </div>
 
 
-            </div>
+            </section>
         
     )
 }
