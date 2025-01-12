@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Tailwind from '../assets/Tailwind_image.png'
 import Html from '../assets/Html_image.png'
 import Css from '../assets/Css_image.png'
@@ -61,15 +63,24 @@ const MyTech = [
 
 
 const TechStack = () => {
+  
+     useEffect(() => {
+            AOS.init({
+                duration: 1000, // Animation duration
+                once: true,     // Only animate once
+                delay: 100,
+                easing: 'ease-in-out'
+            });
+        }, []);
   return (
     <div id="skills">
       <h1 className='text-3xl pt-8 font-bold bg-gray-400 text-gray-900 text-center shadow-md '>My Tech Stack</h1>
       <div className=' grid grid-cols-1 md:grid-cols-2 gap-12 p-12 bg-gray-400  '>
         {MyTech.map((Tech, index) => (
-          <div key={index} className={`group bg-gray-100 flex items-center justify-center p-4 space-x-4 md:flex-col rounded shadow-md hover:shadow-xl transition duration-100 ease-in-out" ${Tech.bgColor}`}>
+          <div key={index} data-aos="slide-up" className={`group bg-gray-100 flex items-center justify-center p-4 space-x-4 md:flex-col rounded shadow-md hover:shadow-xl transition duration-100 ease-in-out" ${Tech.bgColor}`}>
             <div className=''>
-              <img className=' rounded w-[170px] md:w-[90px] group-hover:animate-bounce  transition duration-300 ease-in-out
-              ' src={Tech.imageUrl} />
+              <img  className=' rounded w-[170px] md:w-[90px] group-hover:animate-bounce  transition duration-300 ease-in-out
+              ' data-aos="slide-right" src={Tech.imageUrl} />
             </div>
             <div>
               <p className='text-xl font-semibold'>{Tech.title}</p>
